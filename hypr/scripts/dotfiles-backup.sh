@@ -4,7 +4,7 @@
 set -e
 
 ### Copy the latest config in the backup repo ###
-cp -r ~/.config/hypr ~/dotfiles-backup/hypr
+rsync -a --delete ~/.config/hypr/ ~/dotfiles-backup/hypr/
 
 ### Moving into the dotfiles-backup repo ###
 cd ~/dotfiles-backup
